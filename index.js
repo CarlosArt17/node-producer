@@ -15,7 +15,7 @@ const app = express();
 app.use(cors());
 app.options('*', cors());
 
-const port = 8080;
+const port = 8081;
 
 app.get('/', (req, res, next) => {
   res.send('kafka api - carlosart17');
@@ -35,7 +35,7 @@ const run = async (username) => {
   	} 
       ],
     })
-   await producer.disconnect()
+    await producer.disconnect()
 }
 
 app.get('/like', (req, res, next) => {
